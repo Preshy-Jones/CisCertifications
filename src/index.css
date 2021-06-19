@@ -6,8 +6,56 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+* {
+  box-sizing: border-box;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+}
+
+.logo{
+  /* background: url('images/SIS-LOGO-120x80.png') no-repeat; */
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex: 2;
+  
+}
+.navbar-list{
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ 
+  flex:5;
+  justify-content: space-around;
+}
+
+.nav-item{
+  margin: 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #100f0f;
+}
+
+
+.showcase1{
+  height: 320px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-1{
+  margin-right: 18rem;
+  background: #666!important;
+
 }
