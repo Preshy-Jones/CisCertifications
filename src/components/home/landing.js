@@ -50,7 +50,7 @@ function Landing() {
               value={name}
               onChange={(e)=>setName(e.target.value)}
               className="form-box" 
-              placeholder="Your Name"/>
+              placeholder="Your Full Name"/>
           </div>
           <div className="form-group">
               <input 
@@ -59,7 +59,7 @@ function Landing() {
               required
               value={email}
               onChange={(e)=>setEmail(e.target.value)} 
-              className="form-box" placeholder="Your Email"/>
+              className="form-box" placeholder="Email"/>
           </div>
           <div className="form-group">
               <input 
@@ -68,16 +68,16 @@ function Landing() {
               required
               value={phone}
               onChange={(e)=>setPhone(e.target.value)} 
-              className="form-box" placeholder="Phone No."/>
+              className="form-box" placeholder="Your Mobile Number"/>
           </div>
           <div className="form-group">
               <textarea 
               name="message" 
-              id="message"
+              id="requirement"
               required
               value={message}
               onChange={(e)=>setMessage(e.target.value)}  
-              rows="7" placeholder="Message"></textarea>
+              rows="7" placeholder="Your Requirement"></textarea>
           </div>
           <div className="form-group">
               <input type="submit" value="Send" className="submit"/>
