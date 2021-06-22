@@ -1,47 +1,39 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useState, useEffect} from 'react'
+import CountUp, { useCountUp } from 'react-countup';
 
 function Stats() {
-
-  const [state, setState] = useState({
-    countries:5,
-    customers:1000,
-    auditors:50,
-    experts:50
-  });
-
-  function increment(){
-    setState(prevState=>{
-      return {
-        countries: prevState.countries+5,
-        customers: prevState.customers+1000,
-        auditors:prevState.auditors+50,
-        experts:prevState.experts+50
-      }
-    })
-   }
-
- useEffect(() => {
-  setInterval( increment(), 1000);
+  const {countUp, start, pauseResume, reset, update} = useCountUp({
+    duration:5,
+    end: 10000,
+   // startOnMount:false
+  })
  
- }, [])
+
+  function startCounter(){
+    if(window.scrollY>=2150){
+        return start
+    }
+  }
+
+  window.addEventListener('scroll', startCounter);
 
   return (
-    <div className='showcase5' onScroll={increment}>
+    <div className='showcase5'>
       <div>
-        <h1>{state.countries}+</h1>
+        <h1><CountUp end={30} duration={5}/>+</h1>
         <h3>COUNTRIES</h3>
       </div>
       <div>
-        <h1>{state.customers}+</h1>
+        <h1 onClick={start}>{countUp}+</h1>
         <h3>SATISFIED CUSTOMERS</h3>
       </div>
       <div>
-        <h1>{state.auditors}+</h1>
+        <h1><CountUp end={500} duration={5} />+</h1>
         <h3>AUDITORS</h3>
       </div>
       <div>
-        <h1>{state.experts}+</h1>
+        <h1><CountUp end={250} duration={5}/>+</h1>
         <h3>TECHNICAL EXPERTS</h3>
       </div>
     </div>
