@@ -1,4 +1,4 @@
-export default [
+const isoData = [
   {
     name:'ISO 9001',
     job: 'Quality Management System',
@@ -50,3 +50,5 @@ export default [
     summary:'ISO 9001 Certification is a Global standard for Quality-Management-Systems (QMS), The certification….'
   }
 ]
+
+export default isoData

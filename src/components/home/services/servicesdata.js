@@ -5,7 +5,7 @@ import water from '../../../images/Water-Audit.jpg'
 import training from '../../../images/training.jpg'
 import safety from '../../../images/Safety-Audit.jpg'
 
-export default [
+const services = [
   {name:'SYSTEM CERTIFICATIONS',
   image:certification,
   summary:'We enable you to demonstrate your business, Products, Process and system which is compatible with the national or international guidelines or customer defined standards through certifications…'},
@@ -25,3 +25,6 @@ export default [
   image: water,
   summary:'In Sedex Audit, Sedex word represents Supplier Ethical Data Exchange. It is a non-benefit association with an extremely strong market presence in the UK. Organizations who wish to address..'}
 ]
+
+
+export default services

@@ -6,7 +6,7 @@ import Services from './services/Services'
 import Stats from './Stats'
 import Enquiry from './Enquiry'
 import Carousel from './Carousel'
-import Footer from './Footer/Footer'
+
 
 function Home() {
   return (
@@ -18,7 +18,6 @@ function Home() {
       <Stats/>
       <Enquiry/>
       <Carousel/>
-      <Footer/>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-export default [
+const certificates = [
   {
     certificate: 'ISO 9001(IOAS, IAS)'
   },
@@ -60,3 +60,5 @@ export default [
     certificate: 'ISO 14310'
   },
 ]
+
+export default certificates
