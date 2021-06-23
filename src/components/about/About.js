@@ -95,7 +95,7 @@ function About() {
           <h1>WELCOME TO SIS CERTIFICATIONS</h1>
           <div className="twoblock">
             <p>{aboutData.welcome.paragraph}</p>
-            <video autoPlay='autoplay' controls='controls' height='240' width='auto'>
+            <video className='video'  autoPlay='autoplay' controls='controls' height='240' width='auto'>
               <source src ={vid1}  type="video/mp4"/>
             </video>
           </div>
