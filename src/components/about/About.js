@@ -5,6 +5,9 @@ import { useState} from 'react'
 import vid1 from '../../images/SIS_LOGO_p7bvb5.mp4'
 import aboutData from './AboutData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Form from '../resuables/Form'
+import Isoblock from '../resuables/Isoblock'
+import Download from '../resuables/Download'
 
 function About() {
 
@@ -17,6 +20,10 @@ function About() {
   const data = {name,email,phone,message}
 
   const handleSubmit = async(e)=>{
+
+
+
+
       console.log(data);
       e.preventDefault()
       setisLoading(true)
@@ -46,50 +53,7 @@ function About() {
       <div className="about-grid">
         <div className="getquote">
           <h1>GET QUOTE</h1>
-          <form 
-            onSubmit={handleSubmit}
-            className="form-3">
-          <div className="form-group">
-              <input 
-              name="name" 
-              type="text" 
-              required
-              value={name}
-              onChange={(e)=>setName(e.target.value)}
-              className="form-box" 
-              placeholder="Your Full Name"/>
-          </div>
-          <div className="form-group">
-              <input 
-              name="email" 
-              type="text"
-              required
-              value={email}
-              onChange={(e)=>setEmail(e.target.value)} 
-              className="form-box" placeholder="Email"/>
-          </div>
-          <div className="form-group">
-              <input 
-              name="phone" 
-              type="text" 
-              required
-              value={phone}
-              onChange={(e)=>setPhone(e.target.value)} 
-              className="form-box" placeholder="Your Mobile Number"/>
-          </div>
-          <div className="form-group">
-              <textarea 
-              name="message" 
-              id="requirement"
-              required
-              value={message}
-              onChange={(e)=>setMessage(e.target.value)}  
-              rows="7" placeholder="Your Requirement"></textarea>
-          </div>
-          <div className="form-group">
-              <input type="submit" value="Send" className="submit"/>
-          </div>
-      </form>
+          <Form color='red' />
         </div>
         <div className="welcome">
           <h1>WELCOME TO SIS CERTIFICATIONS</h1>
@@ -100,38 +64,12 @@ function About() {
             </video>
           </div>
         </div>
-        <div className="isoblock">
-          <h1>ISO STANDARDS</h1>
-          <ul>
-            {aboutData.isoStandards.map(iso=>{
-              return(
-                <li><a href="#">{iso}</a></li>
-              )
-            })}
-          </ul>
-        </div>
+        <Isoblock/>
         <div className="whychoose-2">
         <h1>WHY CHOOSE US</h1>
           <p>{aboutData.whychoose.paragraph}</p>
         </div>
-        <div className="download">
-          <h2>DOWNLOAD</h2>
-          <div className='download-box'>
-            <FontAwesomeIcon className='download-icons' icon={['fas', 'download']} />
-            <p><a href="#">Application Form</a></p>
-            <FontAwesomeIcon className='download-icons' icon={['fas', 'file-pdf']} />
-          </div>
-          <div className='download-box'>
-            <FontAwesomeIcon className='download-icons' icon={['fas', 'download']} />
-            <p><a href="#">Company's Profile</a></p>
-            <FontAwesomeIcon className='download-icons' icon={['fas', 'file-pdf']} />
-          </div>
-          <div className='download-box'>
-            <FontAwesomeIcon className='download-icons' icon={['fas', 'download']} />
-            <p><a href="#">Logo Use Regulations</a></p>
-            <FontAwesomeIcon className='download-icons' icon={['fas', 'file-pdf']} />
-          </div>          
-        </div>
+        <Download/>
         <div className="misvis">
           {
             aboutData.mischoose.map(data=>{
