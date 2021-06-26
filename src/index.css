@@ -61,7 +61,7 @@ code {
   height: 400px;
   display: flex;
   justify-content: flex-end;
-  align-content: flex-start;
+  align-content: center;
 }
 
 .form-1{
@@ -71,6 +71,12 @@ code {
   padding: 1rem 1rem 0 1rem
 }
 
+.center-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
 .form-group{
   margin-bottom: 10px;
 }
@@ -621,7 +627,9 @@ font-weight: 600;
 .headers1{
   grid-column: 2/5;
 }
-
+.headers1 p{
+  text-align: justify;
+}
 .accreditation h1{
   font-size: 27px;
   line-height: 29px;
@@ -711,4 +719,87 @@ font-weight: 600;
   font-weight: 600;
   color: #d11717; 
   text-align: justify;
+}
+
+.info-block{
+  text-align: justify;
+}
+
+/* Contact */
+.contact-grid{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column-gap: 3rem;
+}
+
+.contact-grid h2{
+  font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.contact-block{
+  grid-column: 1/3;
+}
+
+.contact{
+  border: 1px solid #d7d7d7;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 1rem;
+}
+
+.form-block{
+  grid-column: 3/8;
+  width: 100%;
+}
+
+.form-4{
+  width: 100%;
+}
+.form-group-3{
+  margin-bottom: 20px;
+}
+
+.form-box-3{
+  line-height: 24px !important;
+  font-size: 14px;
+  border: 1px solid #e6e6e6;
+  height: 50px;
+  padding: 13px 15px;
+  width: 100%;
+
+}
+
+.contact-icon{
+  color: #d11717;
+  width: 52px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 24px;
+}
+
+
+#message{
+  width: 100%;
+    height: 205px;
+    padding: 22px 0 0 15px;
+}
+
+.submit-3{
+  height: 32px !important;
+  padding: 5px 15px !important;
+  background-color: #d11717;
+  border-width: 0;
+  color: #fff;
+  font-family: "Poppins",sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start; 
 }

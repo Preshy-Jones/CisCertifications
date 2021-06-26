@@ -12,13 +12,17 @@ function Accreditation() {
       <div className="accreditation-grid">
       <div className="getquote">
           <h1>GET QUOTE</h1>
-          <Form/>
+          <Form class ='form-3' group= "form-group" box ="form-box" submit='submit' center={true} requirement={true} data={accreditationData.form} />
       </div>
       <Isoblock/>
       <div className="headers1">
         <div className="accreditation">
           <h1>ACCREDITATION</h1>
-          <p>{accreditationData.accreditation}</p>
+          <p>
+            {accreditationData.accreditation[0]}
+            <br/>
+            {accreditationData.accreditation[1]}
+            </p>
         </div>
         <div className="whoaccredited">
           <h1>Who we are accredited by ?</h1>
@@ -45,7 +49,18 @@ How to Get ISO 9001, ISO 14001, OH&S 18001, ISO 22000, ISO 13485, ISO 27001 and 
           return(
           <div className="info-block">
             <h2>{info.name}</h2>
-            <p>{info.body}</p>
+            <p>
+              {info.body[0]}
+              <br/>
+              {info.body[1]}
+              <br/>
+              {info.body[2]}
+              <br/>
+              {info.body[3]}
+              <br/>
+              {info.body[4] && info.body[4]}
+            </p>
+            
         </div>
           )
         })}

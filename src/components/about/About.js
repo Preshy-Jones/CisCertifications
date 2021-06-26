@@ -1,51 +1,16 @@
 import React from 'react'
 import Navigator from '../Navigator'
-import axios from 'axios'
-import { useState} from 'react'
 import vid1 from '../../images/SIS_LOGO_p7bvb5.mp4'
 import aboutData from './AboutData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Form from '../resuables/Form'
 import Isoblock from '../resuables/Isoblock'
 import Download from '../resuables/Download'
+import accreditationData from '../accreditation/AccreditationData'
 
 function About() {
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-  const [message, setMessage] = useState('')
-  const [sent, setSent] = useState(false)
-  const [isLoading, setisLoading] = useState(false)
-  const data = {name,email,phone,message}
-
-  const handleSubmit = async(e)=>{
-
-
-
-
-      console.log(data);
-      e.preventDefault()
-      setisLoading(true)
-
-      setTimeout(() => {
-      axios({
-          method: "POST", 
-          url:"https://burjtech-api.herokuapp.com/send", 
-          data:  data,    
-          headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-              }
-        }).then(() => {
-          setSent(true)      
-          setisLoading(false)
-          setName('')
-          setPhone('')
-          setEmail('')
-          setMessage('')
-        })
-      }, 2000);
-  }
+ 
 
   return (
     <div>
@@ -53,7 +18,7 @@ function About() {
       <div className="about-grid">
         <div className="getquote">
           <h1>GET QUOTE</h1>
-          <Form color='red' />
+          <Form class ='form-3' group= "form-group" box ="form-box" center={true} submit='submit' requirement={true} data={accreditationData.form} />
         </div>
         <div className="welcome">
           <h1>WELCOME TO SIS CERTIFICATIONS</h1>

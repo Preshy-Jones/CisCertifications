@@ -4,20 +4,42 @@ import axios from 'axios'
 
 
 function Form(props) {
+
+
+
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
+  const [location, setLocation] = useState('')
+  const [requirement, setRequirement] = useState('')
   const [sent, setSent] = useState(false)
+  
   const [isLoading, setisLoading] = useState(false)
-  const data = {name,email,phone,message}
+  const data = {name,email,phone,message,location,requirement}
 
-  const color = props.colour
+  const keyState = {
+    'name':{
+      state: name,
+      setState: setName
+    },
+    'email':{
+      state: email,
+      setState: setEmail
+    },
+    'phone':{
+      state: phone,
+      setState: setPhone
+    },
+    'location':{
+      state: location,
+      setState: setLocation
+    },
+  }  
+
+  
 
   const handleSubmit = async(e)=>{
-
-    
-
 
       console.log(data);
       e.preventDefault()
@@ -38,57 +60,72 @@ function Form(props) {
           setPhone('')
           setEmail('')
           setMessage('')
+          setLocation('')
         })
       }, 2000);
   }
 
   return (
-    <div>
+    <div className ={props.center && 'center-form'}>
     <form 
             onSubmit={handleSubmit}
-            className="form-3" style={{backgroundColor: `${color}`}}>
-          <div className="form-group">
-              <input 
-              name="name" 
-              type="text" 
-              required
-              value={name}
-              onChange={(e)=>setName(e.target.value)}
-              className="form-box" 
-              placeholder="Your Full Name"/>
-          </div>
-          <div className="form-group">
-              <input 
-              name="email" 
-              type="text"
-              required
-              value={email}
-              onChange={(e)=>setEmail(e.target.value)} 
-              className="form-box" placeholder="Email"/>
-          </div>
-          <div className="form-group">
-              <input 
-              name="phone" 
-              type="text" 
-              required
-              value={phone}
-              onChange={(e)=>setPhone(e.target.value)} 
-              className="form-box" placeholder="Your Mobile Number"/>
-          </div>
-          <div className="form-group">
+            className={props.class}>
+            {
+              props.data.map(present=>{
+                return(
+                  <div className={props.group}>
+                    <input 
+                    name={present.name} 
+                    type={present.type} 
+                    required
+                    value={keyState[present.name].state}
+                    onChange={(e)=>keyState[present.name].setState(e.target.value)}
+                    className={props.box} 
+                    placeholder={present.placeholder}/>
+                </div>
+                )
+              })
+            }  
+
+            {props.select && <div className="form-group-3 requirement">
+            <select className='form-box-3'>
+            <option value="ISO Certification">Select Your Requirement</option>
+              <option value="ISO Certification">ISO Certification</option>
+              <option value="ISO Training">ISO Training</option>
+              <option value="Other Services">Other Services</option>
+          </select>
+              </div> 
+              }
+
+{ props.requirement &&         <div className={props.group}  >
               <textarea 
-              name="message" 
+              name="requirement" 
               id="requirement"
               required
               value={message}
-              onChange={(e)=>setMessage(e.target.value)}  
+              onChange={(e)=>setRequirement(e.target.value)}  
               rows="7" placeholder="Your Requirement"></textarea>
           </div>
-          <div className="form-group">
-              <input type="submit" value="Send" className="submit"/>
+}
+{
+  props.message &&  <div className="message">
+    <textarea 
+                name="message" 
+                id="message"
+                required
+                value={message}
+                onChange={(e)=>setRequirement(e.target.value)} 
+                cols='40' 
+                rows="10" placeholder="Write Your Message...">
+    </textarea>
+   </div>
+}
+
+          <div className={props.group}>
+              <input type="submit" value="Send" className={props.submit}/>
           </div>
       </form>
-    </div>
+    </div>    
   )
 }
 
