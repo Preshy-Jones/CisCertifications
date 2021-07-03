@@ -26,7 +26,6 @@ function App() {
     <Router>
     <div className="App">
       <NavBar/>
-      <div className="content">
           <Switch>
             <Route exact path="/">
               <Home />
@@ -41,7 +40,7 @@ function App() {
               <Accreditation />
             </Route>
           </Switch>
-        </div>
+
 
       <Footer/>
     </div>

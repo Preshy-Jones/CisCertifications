@@ -10,7 +10,6 @@ import accreditationData from '../accreditation/AccreditationData'
 
 function About() {
 
- 
 
   return (
     <div>

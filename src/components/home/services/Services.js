@@ -9,7 +9,10 @@ function Services() {
       <div className="services">
       {servicesdata.map(service=>{
         return(
-          <div className="service-box" style={{background:`url(${service.image}) no-repeat center center/cover`}}>
+          <div className="service-box" 
+          /* style={{background:`url(${service.image}) no-repeat center center/cover`}} */
+          >
+          <img src={service.image} alt="" />
             <div className="service">
               <h3>{service.name}</h3>
               <FontAwesomeIcon className='i'  icon={['fas', 'chevron-right']} />
