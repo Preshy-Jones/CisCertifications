@@ -16,7 +16,9 @@ function Certifications() {
           {certificates.map(certificate=>{
             return(
               <div className="certificate">
-                <FontAwesomeIcon  icon={['fas', 'certificate']} />
+                <div className="icon-border">
+                  <FontAwesomeIcon className="cert-icon"  icon={['fas', 'certificate']} />
+                </div>
                 <h2>{certificate.certificate}</h2>
               </div>
             )
