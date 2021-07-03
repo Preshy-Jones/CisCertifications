@@ -214,10 +214,7 @@ code {
     flex-direction: column;
     align-items: center;
   }
-  .certificates{
-    grid-template-columns: repeat(3,1fr);
-    
-  }
+
 
   .accredited{
     width:90%
