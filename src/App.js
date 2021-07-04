@@ -23,7 +23,7 @@ library.add(fab, fas,far, faCheckSquare, faCoffee)
 function App() {
   return (
   
-    
+    <Router>
     <div className="App">
       <NavBar/>
           <Switch>
@@ -44,7 +44,7 @@ function App() {
 
       <Footer/>
     </div>
-    
+    </Router>
   );
 }
 
