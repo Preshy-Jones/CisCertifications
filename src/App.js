@@ -7,6 +7,7 @@ import { fas} from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import {
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
