@@ -23,7 +23,7 @@ library.add(fab, fas,far, faCheckSquare, faCoffee)
 function App() {
   return (
   
-    <Router>
+    <Router basename={process.env.PUBLIC_URL} >
     <div className="App">
       <NavBar/>
           <Switch>
