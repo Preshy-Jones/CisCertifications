@@ -7,7 +7,7 @@ import { fas} from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -23,7 +23,7 @@ library.add(fab, fas,far, faCheckSquare, faCoffee)
 function App() {
   return (
   
-    <Router basename={process.env.PUBLIC_URL} >
+    <Router>
     <div className="App">
       <NavBar/>
           <Switch>
