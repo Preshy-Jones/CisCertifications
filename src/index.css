@@ -65,7 +65,7 @@ code {
 }
 
 .form-1{
-  margin-right: 15rem;
+  
   background: #666!important;
   width: 300px;
   padding: 1rem 1rem 0 1rem
@@ -272,7 +272,8 @@ code {
   }
 }
 .showcase4{
-  padding: 0 10rem;
+ width:90%;
+ margin: auto;
 }
 
 .showcase4 h1:first-of-type{
@@ -282,7 +283,7 @@ code {
 .services{
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  grid-row-gap: 30px;
+  /* grid-row-gap: 30px; */
 }
 
 .service-box{
@@ -301,28 +302,53 @@ code {
 
 .service{
   background-color: #3a526a;
-  width: 100%;
+  width: 70%;
   height: 40px;
   display: flex;
-flex-direction: row;
-
+  flex-direction: row;
+  padding-left: 1em;
   align-items: center;
-  margin-bottom: 2rem;
+  position: relative;
+  left: 20px;
+  right: 20px;
+  bottom: 63px;
+  /* margin-bottom: 2rem; */
 }
 
 
 .service h3{
   color: #fff;
+  text-align: justify;
   flex: 4;
 
 }
 
 .service .i{
   color: #fff;
-  display: flex;
   flex: 1;
 
 }
+
+@media (max-width:1305px){
+  .services{
+    grid-column-gap: 2em;
+  }
+}
+
+@media (max-width:770px){
+  .services{
+    grid-template-columns: 1fr;
+  }
+  .service-box img{
+    max-width: 1000px;
+    width:100%
+    /* height: 246.84px; */
+  }
+  .service{
+    width:90%
+  }
+}
+
 
 .showcase5{
   display: grid;
