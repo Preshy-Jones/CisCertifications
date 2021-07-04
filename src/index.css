@@ -57,17 +57,21 @@ code {
   text-decoration: none;
 }
 
+@media (max-width: 770px){
+  .navbar-list{
+    flex-direction:column;
+  }
+}
+
 .showcase1{
   height: 400px;
-  display: flex;
-  justify-content: flex-end;
-  align-content: center;
+
 }
 
 .form-1{
   
   background: #666!important;
-  width: 300px;
+  width: 100%;
   padding: 1rem 1rem 0 1rem
 }
 
@@ -102,6 +106,18 @@ code {
   font-weight: 600;
   display: flex;
   justify-content: flex-start;
+}
+
+@media (min-width:770px){
+  .showcase1{
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+  }
+  .form-1{
+    width: 300px;
+  }
+
 }
 
 .showcase2{

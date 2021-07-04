@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import About from './components/about/About'
 import Contact from './components/contact/Contact'
+import Services from './components/services/Services'
 import Accreditation from './components/accreditation/Accreditation'
 import Footer from './components/Footer/Footer'
 
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/services">
+              <Services />
             </Route>
             <Route path="/accreditation">
               <Accreditation />
