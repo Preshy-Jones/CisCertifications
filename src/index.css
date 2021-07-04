@@ -369,9 +369,31 @@ code {
 .showcase5{
   display: grid;
   grid-template-columns: repeat(4,1fr);
+  /* display: flex;
+  justify-content:space-around; */
   background: #000;
   color: #fff;
   margin-top: 3rem;
+  padding: 1.125em 0;
+  
+}
+
+.showcase5 h1{
+  font-size: 3.125rem;
+  margin:0
+}
+
+.showcase5 h3{
+  margin:0
+}
+
+@media (max-width:770px){
+  .showcase5{
+    /* flex-direction: column; */
+    grid-template-columns: 1fr;
+    grid-row-gap: 2em;
+  }
+
 }
 
 .showcase6{
