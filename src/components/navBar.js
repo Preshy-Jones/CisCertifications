@@ -9,9 +9,9 @@ function navBar() {
       </div>
       <ul className='navbar-list'>
         <li className='nav-item'><a href="/">Home</a></li>
-        <li className='nav-item'><a href="/about">About Us</a></li>
-        <li className='nav-item'><a href="/accreditation">Accreditation</a></li>
-        <li className='nav-item'><a href="/contact">Contact</a></li>
+        <li className='nav-item'><a href="/#/about">About Us</a></li>
+        <li className='nav-item'><a href="/#/accreditation">Accreditation</a></li>
+        <li className='nav-item'><a href="/#/contact">Contact</a></li>
       </ul>
     </div>
   )
