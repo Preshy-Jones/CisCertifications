@@ -283,6 +283,12 @@ code {
   }
 }
 
+@media (max-width:360px){
+  .accredited h1{
+    text-align: center
+  }
+}
+
 /* .showcase3{
 
 } */
