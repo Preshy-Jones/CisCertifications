@@ -29,10 +29,9 @@ code {
 .logo{
   /* background: url('images/SIS-LOGO-120x80.png') no-repeat; */
   height: 80px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  /* width: 100%; */
   flex: 2;
+  /* z-index: 1; */
 
 }
 .navbar-list{
@@ -57,10 +56,54 @@ code {
   text-decoration: none;
 }
 
+.menu-icon{
+  display: none;
+}
+
+.bars,.times{
+  font-size: 2rem;
+}
+
 @media (max-width: 770px){
   .navbar-list{
+    background: #222;
     flex-direction:column;
+    width: 100%;
+    position: absolute;
+    top:80px;
+    align-items: start;
+    flex:0;
+    margin: 0;
+    height:300px;
+    left:-100%;
+    opacity: 1;
+    transition:all 0.5s ease;
   }
+
+  .active{
+    left:0;
+    opacity: 1;
+    transition:all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-item a{
+    color: #fff;
+  }
+  .logo{
+    position: relative;
+    top:0;
+    left:0;
+    transform: translate(25%,0%);
+    flex:0;
+  }
+  .menu-icon{
+    display:block;
+    position: absolute;
+    top:0;
+    right:0;
+    transform: translate(-100%,60%);
+  }
+
 }
 
 .showcase1{
