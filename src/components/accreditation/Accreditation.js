@@ -32,11 +32,15 @@ function Accreditation() {
       <div className="download-certificate">
         <div className="ioas">
           <h5>IOAS (International Organization for Accreditation Services)</h5>
-          <button>Download IOAS Certificate</button>
+          <div>
+            <a href='#'>Download IOAS Certificate</a>
+          </div>
         </div>
         <div className="ias">
           <h5>IOAS (International Organization for Accreditation Services)</h5>
-          <button>Download IOAS Certificate</button>
+          <div>
+            <a href='#'>Download IAS Certificate</a>
+          </div>
         </div>
       </div>
       <div className="img-accr">

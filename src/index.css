@@ -26,6 +26,10 @@ code {
 .navbar{
   display: flex;
   flex-direction: row;
+  position:sticky;
+  z-index: 3;
+  top: 0;
+  background:#fff
   /* justify-content: space-around; */
 }
 
@@ -48,6 +52,19 @@ code {
   justify-content: space-around;
 }
 
+.navbar a::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #18ba60;
+  transition: width .3s;
+}
+.navbar a:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+
 .nav-item{
   margin: 0 10px;
 
@@ -58,6 +75,7 @@ code {
   color: #100f0f;
   text-decoration: none;
 }
+
 
 .menu-icon{
   display: none;
@@ -602,6 +620,13 @@ code {
   padding: 0 6rem;
   background-color: #F8F9F9;
 }
+
+.presentroute h3 a span{
+  font-size:14px;
+  font-weight: bold;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+}
 .presentroute a{
   font-size: 14px;
   font-weight: 400;
@@ -625,7 +650,11 @@ code {
   color: #fff;
 }
 
-
+@media (max-width:360px){
+  .presentroute{
+    padding:0 4em;
+  }
+}
 
 
 
@@ -1027,7 +1056,13 @@ font-weight: 600;
     width: 100%;
 }
 
-.download-certificate button{
+.ioas div, .ias div{
+  padding-left:0.9375em;
+  padding-right:0.9375em;
+  align-self: center;
+}
+
+.download-certificate a{
   background-color: #ED5A5A;
   border-color: #EA4343 !important;
   border-style: solid;
@@ -1045,11 +1080,10 @@ font-weight: 600;
     white-space: nowrap;
     font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
     font-weight: 700;
-    padding: 19px 39px 18px;
+    /* padding: 19px 39px 18px; */
     padding: 10px 15px 10px !important;
     font-size: 15px !important;
-    height: 51px;
-    align-self: center;
+    /* height: 51px; */
 }
 
 .download-certificate h5{
@@ -1105,6 +1139,12 @@ font-weight: 600;
   }
   .headers2{
     grid-row:4/5;
+  }
+  .ias, .ioas{
+    grid-template-columns: 1fr;
+  }
+  .ias h5, .ioas h5{
+    text-align:center
   }
 }
 
