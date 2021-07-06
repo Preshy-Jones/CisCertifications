@@ -5,7 +5,7 @@ function Navigator(props) {
   return (
     <div className="presentroute">
           <h3>
-              <a id='navHome' href="/">
+              <a id='navHome' href="/CisCertifications/#/">
                 Home <span>&#62;</span>
 
               </a>

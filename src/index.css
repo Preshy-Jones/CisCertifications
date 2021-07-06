@@ -652,7 +652,7 @@ code {
 
 @media (max-width:360px){
   .presentroute{
-    padding:0 4em;
+    padding:0 3em;
   }
 }
 
@@ -871,7 +871,7 @@ font-weight: 600;
 @media (max-width:1215px){
   .about-grid{
     width:970px;
-    grid-template-columns: 216.91px auto auto; ;
+    grid-template-columns: 216.91px auto auto; 
   }
  .whychoose-2,.misvis{
    width:96%
@@ -1157,11 +1157,11 @@ font-weight: 600;
 /* Contact */
 .contact-grid{
   display: grid;
-  grid-template-columns: repeat(7,1fr);
+  grid-template-columns: 270px auto;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  grid-column-gap: 3rem;
+  /* grid-column-gap: 3rem; */
 }
 
 .contact-grid h2{
@@ -1171,7 +1171,7 @@ font-weight: 600;
 }
 
 .contact-block{
-  grid-column: 1/3;
+  grid-column: 1/2;
 }
 
 .contact{
@@ -1184,8 +1184,9 @@ font-weight: 600;
 }
 
 .form-block{
-  grid-column: 3/8;
+  grid-column: 2/3;
   width: 100%;
+  padding-left: 3em;
 }
 
 .form-4{
@@ -1231,4 +1232,32 @@ font-weight: 600;
   font-weight: 600;
   display: flex;
   justify-content: flex-start;
+}
+
+@media (max-width: 1215px){
+  .contact-grid{
+    grid-template-columns: 216.91px auto;
+    width:970px;
+  }
+}
+
+@media (max-width:995px){
+  .contact-grid{   
+    width:750px;
+  }
+}
+
+@media (max-width:770px){
+  .contact-grid{
+    grid-template-columns: auto;
+    width:100%
+  }
+  .contact-block{
+    grid-column: 1/2;
+    padding:0 1em
+  }
+  .form-block{
+    grid-column:1/2;
+    padding:0 1em
+  }
 }
