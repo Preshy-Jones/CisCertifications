@@ -6,19 +6,19 @@ function Download() {
         <div className="download">
           <h2>DOWNLOAD</h2>
           <div className='download-box'>
-            <FontAwesomeIcon className='download-icons' icon={['fas', 'download']} />
+            <FontAwesomeIcon className='download-icons down' icon={['fas', 'download']} />
             <p><a href="#">Application Form</a></p>
-            <FontAwesomeIcon className='download-icons' icon={['fas', 'file-pdf']} />
+            <FontAwesomeIcon className='download-icons save' icon={['fas', 'file-pdf']} />
           </div>
           <div className='download-box'>
-            <FontAwesomeIcon className='download-icons' icon={['fas', 'download']} />
+            <FontAwesomeIcon className='download-icons down' icon={['fas', 'download']} />
             <p><a href="#">Company's Profile</a></p>
-            <FontAwesomeIcon className='download-icons' icon={['fas', 'file-pdf']} />
+            <FontAwesomeIcon className='download-icons save' icon={['fas', 'file-pdf']} />
           </div>
           <div className='download-box'>
-            <FontAwesomeIcon className='download-icons' icon={['fas', 'download']} />
+            <FontAwesomeIcon className='download-icons down' icon={['fas', 'download']} />
             <p><a href="#">Logo Use Regulations</a></p>
-            <FontAwesomeIcon className='download-icons' icon={['fas', 'file-pdf']} />
+            <FontAwesomeIcon className='download-icons save' icon={['fas', 'file-pdf']} />
           </div>          
         </div>
   )

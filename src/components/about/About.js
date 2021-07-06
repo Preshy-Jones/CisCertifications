@@ -13,7 +13,7 @@ function About() {
 
   return (
     <div>
-      <Navigator route='About Us'/>
+      <Navigator route='About'/>
       <div className="about-grid">
         <div className="getquote">
           <h1>GET QUOTE</h1>
