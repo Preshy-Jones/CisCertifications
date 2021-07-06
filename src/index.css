@@ -905,9 +905,14 @@ font-weight: 600;
   .welcome{
     padding-left: 0;
   }
+  .welcome p{
+    padding:0 0.9375em;
+  }
   .video{
     padding-left:0;
     padding-right:0;
+    justify-self: center;
+    width:90vw
   }
   .getquote{
     padding:0 15px;
@@ -923,7 +928,7 @@ font-weight: 600;
     width:100%
   }
   .whychoose-2 p{
-    padding-left: 15px;
+    padding:0 0.9375em;
   }
   .misvis{
     grid-column: 1/2;
