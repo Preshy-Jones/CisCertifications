@@ -942,19 +942,19 @@ font-weight: 600;
 /* ACCREDITATION */
 .accreditation-grid{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: 270px auto;
   /* grid-template-rows: 400px 1fr 1fr 1fr; */
   /* padding-right: 15px;
     padding-left: 15px; */
   margin-right: auto;
   margin-left: auto;
   width: 1200px;
-
-  grid-column-gap:20px
 }
 
 .headers1{
-  grid-column: 2/5;
+  grid-column: 2/3;
+  padding-left: 5.128205128205128%;
+  padding-right: 2.564102564102564%;
 }
 .headers1 p{
   text-align: justify;
@@ -973,20 +973,26 @@ font-weight: 600;
 }
 
 .img-accr{
-  grid-column: 2/5;
+  grid-column: 2/3;
 }
 .img-accr img{
   width: 80%;
   height: 80%;
+  padding-left: 5.128205128205128%;
+  padding-right: 2.564102564102564%;
 }
 
 .download-certificate{
-  grid-column: 2/5;
+  grid-column: 2/3;
+  padding-left: 5.128205128205128%;
+  padding-right: 2.564102564102564%;
 }
 
 
 .headers2{
-  grid-column: 2/5;
+  grid-column: 2/3;
+  padding-left: 5.128205128205128%;
+  padding-right: 2.564102564102564%;
 }
 
 .ioas, .ias{
@@ -994,14 +1000,14 @@ font-weight: 600;
   grid-template-columns: repeat(3,1fr);
   border: 1px solid #eaeaea;
   border-top-width: 2px !important;
-    border-right-width: 2px !important;
-    border-bottom-width: 2px !important;
-    border-left-width: 2px !important;
-    padding-top: 10px !important;
-    padding-right: 10px !important;
-    padding-bottom: 10px !important;
-    padding-left: 10px !important;
-    border-left-color: #f2f2f2
+  border-right-width: 2px !important;
+  border-bottom-width: 2px !important;
+  border-left-width: 2px !important;
+  padding-top: 10px !important;
+  padding-right: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 10px !important;
+  border-left-color: #f2f2f2
 }
 
 .ioas h5 , .ias h5{
@@ -1034,6 +1040,7 @@ font-weight: 600;
     padding: 10px 15px 10px !important;
     font-size: 15px !important;
     height: 51px;
+    align-self: center;
 }
 
 .download-certificate h5{
@@ -1052,6 +1059,41 @@ font-weight: 600;
 
 .info-block{
   text-align: justify;
+}
+
+
+@media (max-width: 1215px){
+  .accreditation-grid{
+    grid-template-columns: 216.91px auto;
+    width:970px;
+  }  
+}
+
+@media (max-width:995px){
+  .accreditation-grid{
+    grid-template-columns:auto;
+    grid-template-rows: repeat(6,auto);
+    width:750px
+    
+  }
+@media(max-width:770px){
+  .accreditation-grid{
+    width:100%;
+  }
+}
+
+  .headers1{
+    grid-row:1/2;
+  }
+  .download-certificate{
+    grid-row: 2/3;
+  }
+  .img-accr{
+    grid-row: 3/4;
+  }
+  .headers2{
+    grid-row:4/5;
+  }
 }
 
 /* Contact */
