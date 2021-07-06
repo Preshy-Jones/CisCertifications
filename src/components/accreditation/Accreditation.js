@@ -25,7 +25,7 @@ function Accreditation() {
             </p>
         </div>
         <div className="whoaccredited">
-          <h1>Who we are accredited by ?</h1>
+          <h2>Who we are accredited by ?</h2>
           <p>{accreditationData.whowe}</p>
         </div>
       </div>

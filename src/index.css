@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Poppins', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -62,6 +65,7 @@ code {
 
 .bars,.times{
   font-size: 2rem;
+  color:#18ba60;
 }
 
 @media (max-width: 770px){
@@ -965,7 +969,7 @@ font-weight: 600;
   font-weight: 600;
 }
 
-.whoaccredited h1{
+.whoaccredited h2{
   font-size: 27px;
   line-height: 29px;
   font-weight: 600;
@@ -978,8 +982,13 @@ font-weight: 600;
 .img-accr img{
   width: 80%;
   height: 80%;
+  padding-top: 0.9375em;
+  padding-bottom: 0.9375em;
   padding-left: 5.128205128205128%;
   padding-right: 2.564102564102564%;
+}
+.img-accr p{
+  margin: 0;
 }
 
 .download-certificate{
@@ -1050,6 +1059,9 @@ font-weight: 600;
 }
 
 .headers2 h2{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   font-size: 27px;
   line-height: 29px;
   font-weight: 600;
@@ -1094,6 +1106,12 @@ font-weight: 600;
   .headers2{
     grid-row:4/5;
   }
+}
+
+@media (max-width:360px){
+ .accreditation-grid{
+   grid-row-gap: 1em;
+ }
 }
 
 /* Contact */
