@@ -71,9 +71,9 @@ function Form(props) {
             onSubmit={handleSubmit}
             className={props.class}>
             {
-              props.data.map(present=>{
+              props.data.map((present,index)=>{
                 return(
-                  <div className={props.group}>
+                  <div key={index} className={props.group}>
                     <input 
                     name={present.name} 
                     type={present.type} 

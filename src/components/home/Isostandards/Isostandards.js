@@ -5,9 +5,9 @@ function Isostandards() {
     <div className='showcase3'>
       <h1>ISO Standards</h1>
       <div className="isocards">
-      {isodata.map(iso=>{
+      {isodata.map((iso,index)=>{
         return(
-        <div className="iso-card">
+        <div key={index}className="iso-card">
           <div className="iso">
             {iso.name}
           </div>

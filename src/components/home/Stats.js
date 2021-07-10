@@ -10,13 +10,15 @@ function Stats() {
   })
  
 
-  function startCounter(){
-    if(window.scrollY>=2150){
-        return start
-    }
-  }
+  // const [state, setState] = useState(0)
 
-  window.addEventListener('scroll', startCounter);
+  // function startCounter(){
+  //   if(window.scrollY>=1800){
+  //       setState(<CountUp end={10000} duration={5}/>)
+  //   }
+  // }
+
+  // window.addEventListener('scroll', startCounter);
 
   return (
     <div className='showcase5'>
@@ -26,6 +28,7 @@ function Stats() {
       </div>
       <div>
         <h1 onClick={start}>{countUp}+</h1>
+        {/* <h1>{state}+</h1> */}
         <h3>SATISFIED CUSTOMERS</h3>
       </div>
       <div>

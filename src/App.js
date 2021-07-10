@@ -23,7 +23,7 @@ library.add(fab, fas,far, faCheckSquare, faCoffee)
 
 function App() {
   return (
-  
+
     <Router>
     <div className="App">
       <NavBar/>
@@ -37,16 +37,13 @@ function App() {
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/services">
-              <Services />
-            </Route>
             <Route path="/accreditation">
               <Accreditation />
             </Route>
           </Switch>
 
     <Footer/>
-     
+
     </div>
     </Router>
   );

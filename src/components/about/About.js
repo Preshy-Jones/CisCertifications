@@ -36,14 +36,14 @@ function About() {
         <Download/>
         <div className="misvis">
           {
-            aboutData.mischoose.map(data=>{
+            aboutData.mischoose.map((data,index)=>{
               return(
-                <div>
+                <div key={index}>
                   <h1>{data.section.name}</h1>
                   <div className="bullets">
-                  {data.section.text.map(paragraph=>{
+                  {data.section.text.map((paragraph,index2)=>{
                     return(
-                        <div className='misvisblock'>
+                        <div key={index2} className='misvisblock'>
                         <FontAwesomeIcon className='misvisicon' icon={['fas', 'check']} />
                         <p>{paragraph}</p>
                         </div>

@@ -13,9 +13,9 @@ function Certifications() {
       <img src={img1} alt="" />
       <h2>We Can Issue the Following Certificates:</h2>
         <div className="certificates">
-          {certificates.map(certificate=>{
+          {certificates.map((certificate,index)=>{
             return(
-              <div className="certificate">
+              <div key={index}className="certificate">
                 <div className="icon-border">
                   <FontAwesomeIcon className="cert-icon"  icon={['fas', 'certificate']} />
                 </div>
@@ -30,9 +30,9 @@ function Certifications() {
           <h1>WHY CHOOSE SIS</h1>
           <h2>We Do Not Sell, We Certify !!!</h2>
           <div className="reasons">
-            {reasons.map(reason=>{
+            {reasons.map((reason,index)=>{
               return(
-                <div className="reason">
+                <div key={index}className="reason">
                 <FontAwesomeIcon className='i' icon={['fas', 'check']} />
                 <p>{reason.reason}</p>
                 </div>

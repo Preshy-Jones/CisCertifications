@@ -13,9 +13,9 @@ function Footer() {
       <div className="footer-box footcol-2">
         <h2>{FooterData[1].name}</h2>
         <ul>
-        {FooterData[1].terms.map(term=>{
+        {FooterData[1].terms.map((term,index)=>{
           return(
-              <li>  
+              <li key={index} >  
                 <FontAwesomeIcon className='right-arrow' icon={['fas', 'caret-right']} />
                     <a href="#">{term}</a>
                 </li>
@@ -27,9 +27,9 @@ function Footer() {
       <div className="footer-box footcol-3">
         <h2>{FooterData[2].name}</h2>
         <ul>
-        {FooterData[2].isos.map(iso=>{
+        {FooterData[2].isos.map((iso,index)=>{
           return(
-              <li>  
+              <li key={index}>  
                 <FontAwesomeIcon className='right-arrow' icon={['fas', 'caret-right']} />
                     <a href="#">{iso}</a>
                 </li>

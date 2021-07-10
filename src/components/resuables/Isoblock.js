@@ -6,9 +6,9 @@ function Isoblock() {
          <div className="isoblock">
           <h1>ISO STANDARDS</h1>
           <ul>
-            {aboutData.isoStandards.map(iso=>{
+            {aboutData.isoStandards.map((iso,index)=>{
               return(
-                <li><a href="#">{iso}</a></li>
+                <li key={index}><a href="#">{iso}</a></li>
               )
             })}
           </ul>

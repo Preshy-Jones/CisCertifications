@@ -7,9 +7,9 @@ function Services() {
     <div className='showcase4'>
       <h1>OUR SERVICES</h1>
       <div className="services">
-      {servicesdata.map(service=>{
+      {servicesdata.map((service,index)=>{
         return(
-          <div className="service-box" 
+          <div key={index}className="service-box" 
           /* style={{background:`url(${service.image}) no-repeat center center/cover`}} */
           >
           <img src={service.image} alt="" />

@@ -49,9 +49,9 @@ function Accreditation() {
 How to Get ISO 9001, ISO 14001, OH&S 18001, ISO 22000, ISO 13485, ISO 27001 and Other Certifications Easily?</p>
       </div>
       <div className="headers2">
-        {accreditationData.infos.map(info=>{
+        {accreditationData.infos.map((info,index)=>{
           return(
-          <div className="info-block">
+          <div key={index} className="info-block">
             <h2>{info.name}</h2>
             <p>
               {info.body[0]}

@@ -13,9 +13,9 @@ function Contact() {
       <div className="contact-grid">
         <div className="contact-block">
           <h2>CONTACT DETAILS</h2>
-          {contactData.address.map(contact=>{
+          {contactData.address.map((contact,index)=>{
             return(
-              <div className="contact">
+              <div key={index} className="contact">
                 {contact.icon}
                 <p>{contact.body}</p>
               </div>
