@@ -37,7 +37,14 @@ function DropDown(props) {
 												className="right-arrow"
 												icon={["fas", "caret-right"]}
 											/>
-											<a href="#">{term}</a>
+											<a
+												href={
+													index !== 5
+														? `/CisCertifications/#/policy/${item.links[index]}`
+														: item.links[index]
+												}>
+												{term}
+											</a>
 										</li>
 									);
 								})}

@@ -154,6 +154,10 @@ code {
 	text-align: justify;
 	/* padding-bottom: 0.4375em; */
 }
+.dropdown li:hover {
+	background-color: #d11717;
+}
+
 .dropdown li a {
 	text-decoration: none;
 	/* line-height: 1.5rem; */
@@ -696,12 +700,17 @@ code {
 	text-align: justify;
 	padding-bottom: 0.4375em;
 }
+
 .showcase8 li a {
 	text-decoration: none;
 	line-height: 1.5rem;
 	font-size: 0.875rem;
 	color: #fff;
 }
+.showcase8 li a:hover {
+	color: #d11717;
+}
+
 .footcol-1 p {
 	text-align: justify;
 	font-size: 0.875rem;
@@ -1462,6 +1471,9 @@ code {
 .red {
 	color: #d11717;
 	font-weight: bold;
+}
+.bg-red {
+	background-color: #d11717;
 }
 
 .table {
