@@ -77,7 +77,6 @@ function NavBar() {
 
             onMouseEnter={()=> data.dropdown && onMouseEnter(data.name)}
             onMouseLeave={()=> data.dropdown && onMouseLeave(data.name)}
-
             >
 
               

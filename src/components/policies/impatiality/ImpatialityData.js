@@ -1,71 +1,3 @@
-function find_max(nums) {
-	let max_num = Number.NEGATIVE_INFINITY;
-	for (let num of nums) {
-		if (num > max_num) {
-			max_num = num;
-		}
-	}
-	return max_num;
-}
-
-<ul
-	onClick={handleClick}
-	className={click ? "dropdown-menu clicked2" : "dropdown-menu"}>
-	{DropDownItems[props.data].map((item, index) => {
-		return (
-			<li key={index}>
-				<a
-					className="dropdown-link"
-					href={item.path}
-					onClick={() => setClick(false)}>
-					{item.title}
-				</a>
-			</li>
-		);
-	})}
-</ul>;
-
-{
-	props.about && (
-		<div className="dropdown-box dropdowncol-1">
-			<h2>{FooterData[0].name}</h2>
-			<p>{FooterData[0].body}</p>
-		</div>
-	);
-}
-
-/* <Route path="/services">
-              <Services />
-            </Route> */
-
-// onMouseEnter={()=> data.dropdown && onMouseEnter(data.name)}
-// onMouseLeave={()=> data.dropdown && onMouseLeave(data.name)}
-
-{
-	DropDownItems[props.data].map((item, index) => {
-		if (item.items) {
-			return (
-				<div className="dropdown-box dropdowncol-2">
-					<h2>{item.name}</h2>
-					<ul>
-						{item.items.map((term, index) => {
-							return (
-								<li key={index}>
-									<FontAwesomeIcon
-										className="right-arrow"
-										icon={["fas", "caret-right"]}
-									/>
-									<a href="#">{term}</a>
-								</li>
-							);
-						})}
-					</ul>
-				</div>
-			);
-		}
-	});
-}
-
 const impatialityData = [
 	"The Certification Procedures Are Approved By The Managing Director And Are To Be Abided When Applicable And When QMS/EMS/OHSAS/OHSMS/FSMS Certification Is Conducted According To ISO 17021 & ISO/TS 22003Accreditation Standards.",
 
@@ -87,7 +19,7 @@ const impatialityData = [
 	"SIS Certifications Shall Not Outsource Audits To A Management System Consultancy Organization As This Poses An Unacceptable Threat To The Impartiality Of The Certification Body. This Does Not Apply To Individuals Contracted As Auditors Or Technical Experts.",
 	"SIS Certifications Does Not Receive Any Financial Support Different From The Invested In It And The Fees Of Its Services\nSIS Certifications Does Not Pay Any Commissions To Consultants. Therefore There Can Be No Pressure Exercised On SIS Certifications By Consultants.",
 	"SIS Certifications Shall Not Allow Any Pressure From Other Certification Bodies To Influence The Certification Process In The Organization. If Other Certification Body Declines To Provide Service For Client And The Client Requests The Same Service Form . SIS Certifications Than . SIS Certifications Shall Investigate The Reasons For Declining Before Performing Any Other Certification Activities For The Respective Client.",
-	"SIS Certifications Shall Not Allow Pressure From Clients And/Or Consultancy Organizations. If There Is Such Pressure Than . SIS Certifications Will Apply Requirements Of ISO 17021 & ISO/TS 22003 And Internal Procedures In Order To Stop Such Practice. <br/> SIS Certifications Shall Not Allow Pressure From Employees And/Or Related Persons. <br/> All Employees Are Obliged To Work In Compliance With Requirements Of ISO 17021 & ISO/TS 22003 As Per Agreement Of Contract. <br/> Top Management Of . SIS Certifications Is Committed To Full Compliance With This Declaration.",
+	"SIS Certifications Shall Not Allow Pressure From Clients And/Or Consultancy Organizations. If There Is Such Pressure Than . SIS Certifications Will Apply Requirements Of ISO 17021 & ISO/TS 22003 And Internal Procedures In Order To Stop Such Practice. SIS Certifications Shall Not Allow Pressure From Employees And/Or Related Persons. All Employees Are Obliged To Work In Compliance With Requirements Of ISO 17021 & ISO/TS 22003 As Per Agreement Of Contract. Top Management Of . SIS Certifications Is Committed To Full Compliance With This Declaration.",
 ];
 
 export default impatialityData;
